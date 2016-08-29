@@ -11,7 +11,21 @@
     tools:context="mvp.demo.dk.com.simplemvpdemo.activity.MainActivity">
 
     <TextView
+        android:id="@+id/noComputer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="No computer in factory" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create computer"
+        android:layout_below="@+id/noComputer"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@+id/btnCreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

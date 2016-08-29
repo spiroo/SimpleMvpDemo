@@ -1,5 +1,9 @@
 package mvp.demo.dk.com.simplemvpdemo.task;
 
+import java.util.ArrayList;
+
+import mvp.demo.dk.com.simplemvpdemo.data.Computer;
+
 /**
  * Created by DK-dong on 2016/8/23.
  */
@@ -8,39 +12,30 @@ public interface TaskContract {
 
     interface View {
 
-        void setLoadingIndicator(boolean active);
+        void showCreatingComputer();
 
-        void showMissingTask();
 
-        void hideTitle();
+        void showComputerCountChange();
 
-        void showTitle(String title);
+        void showNoComputer();
 
-        void hideDescription();
+        void showFactoryBusy();
 
-        void showDescription(String description);
+        void showCreatedComputer();
 
-        void showCompletionStatus(boolean complete);
-
-        void showEditTask(String taskId);
-
-        void showTaskDeleted();
-
-        void showTaskMarkedComplete();
-
-        void showTaskMarkedActive();
-
-        boolean isActive();
+        void hideNoComputer();
     }
 
     interface Presenter {
 
-        void editTask();
+        void addComputer(Computer computer);
 
-        void deleteTask();
+        void removeComputer(Computer computer);
 
-        void completeTask();
+        void removeComputer(int index);
 
-        void activateTask();
+        ArrayList<Computer> getComputerList();
+
+        void addRandomComputer();
     }
 }

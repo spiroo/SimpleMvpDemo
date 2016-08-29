@@ -38,4 +38,13 @@ public class Computer {
     public void setModel(String model) {
         this.model = model;
     }
+
+    @Override
+    public String toString() {
+        return "Computer {" +
+                "name='" + name + '\'' +
+                ", price=" + price + '\'' +
+                ", model=" + model +
+                '}';
+    }
 }

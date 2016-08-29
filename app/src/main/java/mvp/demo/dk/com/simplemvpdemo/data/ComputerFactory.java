@@ -29,4 +29,8 @@ public class ComputerFactory {
         }
     }
 
+    public int getComputerCounts(){
+        return computers.size();
+    }
+
 }
